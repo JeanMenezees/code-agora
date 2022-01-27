@@ -150,7 +150,7 @@ export default function PaginaInicial() {
 
             <CampoDeTexto
               hasLabel={!usuarioValido}
-              label="Seu username precisa ter mais de dois caracteres"
+              label="Usuário inválido"
               styleSheet={{
                 padding: "16px",
               }}
@@ -182,6 +182,7 @@ export default function PaginaInicial() {
             <Botao
               type="submit"
               label="Entrar"
+              disabled={!usuarioValido}
               fullWidth
               styleSheet={{
                 padding: "16px",
