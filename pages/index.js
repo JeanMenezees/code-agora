@@ -4,10 +4,12 @@ import { Text as Texto } from "@skynexui/components";
 import { TextField as CampoDeTexto }  from "@skynexui/components";
 import appConfig from "../config.json";
 import React from "react";
+import { useRouter } from 'next/router';
 
 export default function PaginaInicial() {
   const [username, setUsername] = React.useState("");
   const [usuarioValido, setUsuarioValido] = React.useState();
+  const roteador = useRouter();
 
   return (
     <>
@@ -102,6 +104,8 @@ export default function PaginaInicial() {
             }}
             onSubmit={(event) => {
               event.preventDefault();
+
+              roteador.push('/chat');
             }}
           >
             <Texto
