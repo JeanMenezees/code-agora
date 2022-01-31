@@ -105,7 +105,7 @@ export default function PaginaInicial() {
             onSubmit={(event) => {
               event.preventDefault();
 
-              roteador.push('/chat');
+              roteador.push(`/chat?username=${username}`);
             }}
           >
             <Texto
